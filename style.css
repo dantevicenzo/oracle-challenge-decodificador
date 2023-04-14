@@ -27,6 +27,7 @@ input, textarea, button {
 .container {
     padding: 30px 30px 0px 30px;
     height: 100vh;
+    min-width: 1280px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -46,7 +47,7 @@ input, textarea, button {
     padding-right: 3vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-end;
 }
 
@@ -170,6 +171,10 @@ textarea {
     color: var(--dark-blue-300-color);
 }
 
+.btn-container {
+    min-width: 723px;
+}
+
 .msg-not-found {
     text-align: center;
 }
@@ -217,16 +222,4 @@ textarea {
     margin-left: 8px;
     font-size: 12px;
     color: var(--gray-400-color);
-}
-
-/* 
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
-
-@media (min-width: 1281px) {
-  
-    .app-container {
-        justify-content: center;
-    }
 }

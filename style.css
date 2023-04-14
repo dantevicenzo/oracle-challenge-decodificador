@@ -1,0 +1,158 @@
+:root {
+    /*Paleta de cores do projeto*/
+    --light-blue-100-color: #F3F5FC;
+    --dark-blue-300-color: #0A3871;
+    --white-color: #FFFFFF;
+    --gray-500-color: #343A40;
+    --gray-400-color: #495057;
+    --light-gray-color: #D8DFE8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-blue-100-color);
+}
+
+input, textarea, button {
+    font-family: inherit
+}
+
+.container {
+    padding: 40px 40px 40px 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.app-container {
+    width: auto;
+    height: calc(100vh - 155px);
+    padding-top: 40px;
+    padding-left: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-alura {
+    margin: 0 40px;
+}
+
+.left-container {
+    width: 100%;
+    margin-right: 40px;
+    height: calc(100vh - 80px);
+    padding-bottom: 32px;
+}
+
+.right-container {
+    width: 400px;
+    margin-left: 40px;
+    height: calc(100vh - 80px);
+    background: var(--white-color);
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    padding: 32px;
+}
+
+textarea {
+    border: none;
+    /* overflow: auto;  */
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    width: 684px;
+    max-height: 619px;
+    resize: none;
+    margin-bottom: 16px;
+    background: transparent;
+
+    font-size: 32px;
+    color: var(--dark-blue-300-color);
+}
+
+.btn {
+    padding: 24px;
+    border-radius: 24px;
+    width: 328px;
+    height: 67px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+.btn.dark-blue {
+    background: var(--dark-blue-300-color);
+    border: none;
+    color: var(--white-color);
+    margin-right: 12px;
+}
+
+.btn.light-gray {
+    background: var(--light-gray-color);
+    border: 1px solid var(--dark-blue-300-color);
+    color: var(--dark-blue-300-color);
+    margin-left: 12px;
+}
+
+.btn.white {
+    background: var(--white-color);
+    border: 1px solid var(--dark-blue-300-color);
+    color: var(--dark-blue-300-color);
+}
+
+.msg-not-found {
+    text-align: center;
+}
+
+.msg-not-found h3 {
+    color: var(--gray-500-color);
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 32px;
+}
+
+.msg-not-found p {
+    color: var(--gray-400-color);
+    font-size: 16px;
+    margin-top: 16px;
+}
+
+.msg-encrypted {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 128px);
+    max-height: calc(100vh - 128px);
+    justify-content: space-between;
+}
+
+.msg-encrypted p {
+    margin-bottom: 32px;
+    font-size: 24px;
+    color: var(--gray-400-color);
+}
+
+.requirements {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.requirements span {
+    margin-left: 8px;
+    font-size: 12px;
+    color: var(--gray-400-color);
+}

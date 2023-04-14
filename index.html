@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Decodificador</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        <script src="main.js"></script>
+
+        <div class="container">
+            <div class="left-container">
+                <header>
+                    <img class="logo-alura" src="images/logo-alura.svg" alt="Logo da Alura">
+                </header>
+                
+                <div class="app-container">
+                    <label hidden for="message">Digite seu texto aqui</label>
+    
+                    <textarea id="message" name="message" rows="32" cols="33">Digite seu texto aqui</textarea>
+        
+                    <div class="btn-container">
+                        <div class="requirements">
+                            <img src="images/exclamation-circle.svg" alt="">
+                            <span>Apenas letras minúsculas e sem acento.</span>
+                        </div>
+                        <div class="btn-encrypt-decrypt">
+                            <button class="btn dark-blue">Criptografar</button>
+                            <button class="btn light-gray">Descriptografar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-container">
+                <aside>
+                    <!-- Mensagem não encontrada -->
+                    <div class="msg-not-found">
+                        <img src="images/no-message-found.svg" alt="Nenhuma mensagem encontrada.">
+                        <h3>Nenhuma mensagem encontrada</h2>
+                        <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                    </div>
+
+                    <!-- Mensagem criptografada -->
+                    <!-- <div hidden class="msg-encrypted">
+                        <p>asndoqabdosihabdiskdhb</p>
+                        <button class="btn white">Copiar</button>
+                    </div> -->
+                </aside>
+            </div>
+        </div>
+    </body>
+</html>

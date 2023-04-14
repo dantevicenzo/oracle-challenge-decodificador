@@ -54,7 +54,7 @@ input, textarea, button {
 }
 
 .right-container {
-    width: 400px;
+    width: 390px;
     margin-left: 40px;
     height: calc(100vh - 80px);
     background: var(--white-color);
@@ -62,6 +62,7 @@ input, textarea, button {
     border-radius: 32px;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 32px;
 }
 

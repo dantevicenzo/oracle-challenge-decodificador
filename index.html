@@ -13,41 +13,57 @@
     
     <body>
         <div class="container">
-            <div class="left-container">
-                <header>
-                    <img class="logo-alura" src="images/logo-alura.svg" alt="Logo da Alura">
+            <div class="wrap-container">
+                <div class="left-container">
+                    <header>
+                        <img class="logo-alura" src="images/logo-alura.svg" alt="Logo da Alura">
+                        
+                    </header>
                     
-                </header>
-                
-                <div class="app-container">
-                    <label hidden for="msgTextarea">digite seu texto aqui</label>
-                    <textarea id="msgTextarea" name="msgTextarea" rows="32" cols="33">digite seu texto aqui</textarea>
-        
-                    <div class="btn-container">
-                        <div class="requirements">
-                            <img src="images/exclamation-circle.svg" alt="">
-                            <span>Apenas letras minúsculas e sem acento.</span>
-                        </div>
-                        <div class="btn-encrypt-decrypt">
-                            <button id="btnEncrypt" class="btn dark-blue">Criptografar</button>
-                            <button id="btnDecrypt" class="btn light-gray">Descriptografar</button>
+                    <div class="app-container">
+                        <label hidden for="msgTextarea">digite seu texto aqui</label>
+                        <textarea id="msgTextarea" name="msgTextarea" rows="32" cols="33">digite seu texto aqui</textarea>
+            
+                        <div class="btn-container">
+                            <div class="requirements">
+                                <img src="images/exclamation-circle.svg" alt="">
+                                <span>Apenas letras minúsculas e sem acento.</span>
+                            </div>
+                            <div class="btn-encrypt-decrypt">
+                                <button id="btnEncrypt" class="btn dark-blue">Criptografar</button>
+                                <button id="btnDecrypt" class="btn light-gray">Descriptografar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+    
+                <div class="right-container">
+                    <aside>
+                        <!-- Mensagem não encontrada -->
+                        <div class="msg-not-found">
+                            <img src="images/no-message-found.svg" alt="Nenhuma mensagem encontrada.">
+                            <h3>Nenhuma mensagem encontrada</h2>
+                            <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                        </div>
+                    </aside>
+                </div>
             </div>
 
-            <div class="right-container">
-                <aside>
-                    <!-- Mensagem não encontrada -->
-                    <div class="msg-not-found">
-                        <img src="images/no-message-found.svg" alt="Nenhuma mensagem encontrada.">
-                        <h3>Nenhuma mensagem encontrada</h2>
-                        <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
-                    </div>
-                </aside>
+            <div class="footer-container">
+                <footer>
+                    <ul>
+                        <li>© Desenvolvido por Dante Vicenzo</li>
+                        <li>|</li>
+                        <li>
+                            <a href="https://github.com/dantevicenzo/" target="_blank"><img src="images/github-icon.svg" alt="Logo do GitHub"> GitHub</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/dantevicenzo/" target="_blank"><img src="images/linkedin-icon.svg" alt="Logo do LinkedIn"> LinkedIn</a>
+                        </li>
+                    </ul>
+                </footer>
             </div>
         </div>
-
         <script src="main.js"></script>
     </body>
 </html>

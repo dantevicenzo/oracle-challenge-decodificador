@@ -78,6 +78,7 @@ function encrypt() {
 function decrypt() {
     let finalMessage = getMessage();
     let encryptRegex = new RegExp("^.*(ai|enter|imes|ober|ufat).*$");
+    let encryptedMessage = encryptRegex.test(finalMessage);
 
     if(finalMessage == ""){
         resetMsgTextarea();
@@ -85,7 +86,7 @@ function decrypt() {
         return;
     }
 
-    if(!encryptRegex.test(finalMessage)){
+    if(!encryptedMessage){
         warnNoMessageFound();
         return;
     }

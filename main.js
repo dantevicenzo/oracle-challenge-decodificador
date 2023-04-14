@@ -16,8 +16,6 @@ function showResult(result){
 }
 
 function warnNoMessageFound(){
-    document.getElementById("msgTextarea").value = "digite seu texto aqui";
-
     let aside = document.getElementsByTagName("aside")[0];
 
     aside.innerHTML = `
@@ -29,10 +27,15 @@ function warnNoMessageFound(){
     `
 }
 
+function resetMsgTextarea(){
+    document.getElementById("msgTextarea").value = "digite seu texto aqui";
+}
+
 function encrypt() {
     let initialMessage = getMessage();
 
     if(initialMessage == ""){
+        resetMsgTextarea();
         warnNoMessageFound();
         return;
     }
@@ -74,12 +77,19 @@ function encrypt() {
 
 function decrypt() {
     let finalMessage = getMessage();
+    let encryptRegex = new RegExp("^.*(ai|enter|imes|ober|ufat).*$");
 
     if(finalMessage == ""){
+        resetMsgTextarea();
         warnNoMessageFound();
         return;
     }
 
+    if(!encryptRegex.test(finalMessage)){
+        warnNoMessageFound();
+        return;
+    }
+    
     finalMessage = finalMessage.replaceAll("ai", "a");
     finalMessage = finalMessage.replaceAll("enter", "e");
     finalMessage = finalMessage.replaceAll("imes", "i");

@@ -52,6 +52,7 @@ input, textarea, button {
 }
 
 .footer-container {
+    min-width: 1280px;
     width: 100vw;
     height: 33px;
     display: flex;

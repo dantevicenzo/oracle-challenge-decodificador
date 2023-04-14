@@ -93,6 +93,11 @@ textarea {
     font-size: 16px;
 }
 
+.btn:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
 
 .btn.dark-blue {
     background: var(--dark-blue-300-color);
@@ -131,7 +136,7 @@ textarea {
     margin-top: 16px;
 }
 
-.msg-encrypted {
+.msg-result {
     display: flex;
     flex-direction: column;
     height: calc(100vh - 128px);
@@ -139,10 +144,14 @@ textarea {
     justify-content: space-between;
 }
 
-.msg-encrypted p {
-    margin-bottom: 32px;
+.msg-result p {
+    /* margin-bottom: 32px; */
     font-size: 24px;
     color: var(--gray-400-color);
+}
+
+.msg-result button {
+    margin-top: 32px;
 }
 
 .requirements {

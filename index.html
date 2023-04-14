@@ -12,8 +12,6 @@
     </head>
     
     <body>
-        <script src="main.js"></script>
-
         <div class="container">
             <div class="left-container">
                 <header>
@@ -21,9 +19,8 @@
                 </header>
                 
                 <div class="app-container">
-                    <label hidden for="message">Digite seu texto aqui</label>
-    
-                    <textarea id="message" name="message" rows="32" cols="33">Digite seu texto aqui</textarea>
+                    <label hidden for="msgTextarea">digite seu texto aqui</label>
+                    <textarea id="msgTextarea" name="msgTextarea" rows="32" cols="33">digite seu texto aqui</textarea>
         
                     <div class="btn-container">
                         <div class="requirements">
@@ -31,8 +28,8 @@
                             <span>Apenas letras minúsculas e sem acento.</span>
                         </div>
                         <div class="btn-encrypt-decrypt">
-                            <button class="btn dark-blue">Criptografar</button>
-                            <button class="btn light-gray">Descriptografar</button>
+                            <button id="btnEncrypt" class="btn dark-blue">Criptografar</button>
+                            <button id="btnDecrypt" class="btn light-gray">Descriptografar</button>
                         </div>
                     </div>
                 </div>
@@ -48,12 +45,14 @@
                     </div>
 
                     <!-- Mensagem criptografada -->
-                    <!-- <div hidden class="msg-encrypted">
-                        <p>asndoqabdosihabdiskdhb</p>
-                        <button class="btn white">Copiar</button>
+                    <!-- <div class="msg-result">
+                        <p id="msgResult">Lorem ipsum</p>
+                        <button id="btnCopyToClipboard" class="btn white">Copiar</button>
                     </div> -->
                 </aside>
             </div>
         </div>
+
+        <script src="main.js"></script>
     </body>
 </html>

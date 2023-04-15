@@ -1,5 +1,7 @@
-Descrição<br/><br/>
+# Decodificador de Texto - Oracle Next Education<br/><br/>
 Boas vindas ao primeiro desafio!<br/>
+
+
 
 Durante estas duas semanas, vamos trabalhar em uma aplicação que criptografa textos, assim você poderá trocar mensagens secretas com outras pessoas que saibam o segredo da criptografia utilizada.<br/>
 
@@ -26,3 +28,7 @@ Extras:<br/>
 - Um botão que copie o texto criptografado/descriptografado para a área de transferência - ou seja, que tenha a mesma funcionalidade do ctrl+C ou da opção "copiar" do menu dos aplicativos.<br/>
 
 Temos um período de tempo de duas semanas para desenvolver o projeto e vamos trabalhar com o sistema ágil de desenvolvimento, utilizando o Trello.<br/>
+
+Protótipo figma: https://www.figma.com/file/tvFEYhVfZTjdJ5P24RGV21/Alura-Challenge---Desafio-1---L%C3%B3gica?node-id=0-1&t=rR60uE6zm5i8mpoq-0
+
+![Imagem de Exemplo](https://user-images.githubusercontent.com/91544872/157673876-2c51fc09-5bed-48c0-aad3-97fc7fa64d1d.png)

@@ -27,6 +27,14 @@ O resultado deve ser exibido na tela.<br/>
 Extras:<br/>
 - Um botão que copie o texto criptografado/descriptografado para a área de transferência - ou seja, que tenha a mesma funcionalidade do ctrl+C ou da opção "copiar" do menu dos aplicativos.<br/>
 
+Funcionalidades adicionais que eu pensei em agregar ao projeto:<br/>
+- Ao descriptografar, verificar se existe uma mensagem criptografada no texto, caso não tenha mensagem criptografada, exibir mensagem informando que nenhuma mensagem foi encontrada, caso tenha mensagem criptografada, seguir o fluxo normal da descriptografia.
+- Animações nos botões para melhorar a experiência do usuário.
+- Mensagem de feedback informando que o texto foi copiado para área de transferência, dentro da aplicação ou em uma modal.
+- Validação automática do texto digitado na textarea para não permitir letras maiúsculas, acentuações e caracteres especiais, mesmo que o usuário tente inserir esses caracteres, garantindo a funcionalidade da aplicação, evitando bugs e mensagens de erro pro usuário final. 
+- Integração com chatgpt
+
+
 Temos um período de tempo de duas semanas para desenvolver o projeto e vamos trabalhar com o sistema ágil de desenvolvimento, utilizando o Trello.<br/>
 
 Protótipo figma: https://www.figma.com/file/tvFEYhVfZTjdJ5P24RGV21/Alura-Challenge---Desafio-1---L%C3%B3gica?node-id=0-1&t=rR60uE6zm5i8mpoq-0

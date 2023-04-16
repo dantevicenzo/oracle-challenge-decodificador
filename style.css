@@ -91,10 +91,12 @@ body {
 }
 
 /* Botões - Animações */
-.btn:hover {
-    opacity: 0.7;
-    transform: scale(1.009);
-    cursor: pointer;
+@media (hover: hover) {
+    .btn:hover {
+        opacity: 0.7;
+        transform: scale(1.009);
+        cursor: pointer;
+    }
 }
 
 .btn:active {
@@ -377,15 +379,7 @@ footer a:visited {
     }
 }
 
-/* Solução para dispositivos que não tem hover */
-@media(hover: none) {
-    .btn:hover {
-        opacity: 0.9;
-    }
-}
-
 /* Animações customizadas */
-
 .fade-in {
     animation: fadeIn 0.5s;
     -webkit-animation: fadeIn 0.5s;

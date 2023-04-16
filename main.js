@@ -92,7 +92,7 @@ function decrypt() {
 function copyToClipboard() {
     let msgResult = document.getElementById("msgResult").innerText;
     navigator.clipboard.writeText(msgResult);
-    showResult("Texto copiado para a área de trabalho.");
+    showResult("Texto copiado para a área de transferência.");
 }
 
 function validateTextareaRegex(){

@@ -29,7 +29,7 @@ function warnNoMessageFound(){
 
 function encrypt() {
     let initialMessage = getMessage();
-    
+
     if(initialMessage == ""){
         warnNoMessageFound();
         return;
@@ -58,15 +58,15 @@ function encrypt() {
             case 'u':
                 finalMessage += "ufat";
                 break;
-        
+
             default:
                 finalMessage += char;
-                
+
                 // alert(char);
                 break;
         }
     }
-    
+
     showResult(finalMessage);
 }
 
@@ -79,7 +79,7 @@ function decrypt() {
         warnNoMessageFound();
         return;
     }
-    
+
     finalMessage = finalMessage.replaceAll("ai", "a");
     finalMessage = finalMessage.replaceAll("enter", "e");
     finalMessage = finalMessage.replaceAll("imes", "i");
@@ -92,7 +92,19 @@ function decrypt() {
 function copyToClipboard() {
     let msgResult = document.getElementById("msgResult").innerText;
     navigator.clipboard.writeText(msgResult);
-    showResult("Texto copiado para a área de transferência.");
+
+    let resultSection = document.getElementById("result");
+    // let height = resultSection.clientHeight;
+    let height = resultSection.getElementsByClassName("msg-result")[0].clientHeight;
+
+    resultSection.innerHTML = `
+    <div class="msg-copied fade-in" style="min-height: ${height}px">
+        <h3>Mensagem copiada</h2>
+    </div>
+    `
+    setTimeout( function() {
+        showResult(msgResult);
+    }, 1500);
 }
 
 function validateTextareaRegex(){
@@ -187,11 +199,11 @@ function removeDiacritics (str) {
       {'base':'y','letters':/[\u0079\u24E8\uFF59\u1EF3\u00FD\u0177\u1EF9\u0233\u1E8F\u00FF\u1EF7\u1E99\u1EF5\u01B4\u024F\u1EFF]/g},
       {'base':'z','letters':/[\u007A\u24E9\uFF5A\u017A\u1E91\u017C\u017E\u1E93\u1E95\u01B6\u0225\u0240\u2C6C\uA763]/g}
     ];
-  
+
     for(var i=0; i<defaultDiacriticsRemovalMap.length; i++) {
       str = str.replace(defaultDiacriticsRemovalMap[i].letters, defaultDiacriticsRemovalMap[i].base);
     }
-  
+
     return str;
 }
 

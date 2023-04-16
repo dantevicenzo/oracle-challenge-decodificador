@@ -195,7 +195,8 @@ textarea::placeholder {
     margin-top: 32px;
 }
 
-.msg-not-found {
+.msg-not-found,
+.msg-copied {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -207,7 +208,8 @@ textarea::placeholder {
     margin-bottom: 32px;
 }
 
-.msg-not-found h3{
+.msg-not-found h3,
+.msg-copied h3{
     font-size: 2.4rem;
     line-height: 2.9rem;
     color: var(--gray-500-color);

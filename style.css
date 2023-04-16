@@ -196,6 +196,17 @@ textarea::placeholder {
     line-height: 3.4rem;
 }
 
+/* Remove o overflow de texto vertical na mensagem de resultado em desktops */
+@media (min-width: 1024px){
+    .msg-result p {
+        display: -webkit-box;
+        -webkit-line-clamp: 13; /** número de linhas que você quer exibir */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
 .msg-result button{
     margin-top: 32px;
 }

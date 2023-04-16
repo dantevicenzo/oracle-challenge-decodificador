@@ -61,8 +61,6 @@ function encrypt() {
 
             default:
                 finalMessage += char;
-
-                // alert(char);
                 break;
         }
     }
@@ -94,7 +92,6 @@ function copyToClipboard() {
     navigator.clipboard.writeText(msgResult);
 
     let resultSection = document.getElementById("result");
-    // let height = resultSection.clientHeight;
     let height = resultSection.getElementsByClassName("msg-result")[0].clientHeight;
 
     resultSection.innerHTML = `

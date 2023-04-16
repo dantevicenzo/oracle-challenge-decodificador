@@ -7,7 +7,7 @@ function showResult(resultMsg){
 
     resultSection.innerHTML = `
     <div class="msg-result">
-        <p id="msgResult">${resultMsg}</p>
+        <p id="msgResult" class="fade-in">${resultMsg}</p>
         <button id="btnCopyToClipboard" class="btn white">Copiar</button>
     </div>
     `
@@ -19,7 +19,7 @@ function warnNoMessageFound(){
     let resultSection = document.getElementById("result");
 
     resultSection.innerHTML = `
-    <div class="msg-not-found">
+    <div class="msg-not-found fade-in">
         <img src="images/no-message-found.svg" alt="Nenhuma mensagem encontrada.">
         <h3>Nenhuma mensagem encontrada</h2>
         <p>Digite um texto que você deseja criptografar ou descriptografar.</p>

@@ -240,5 +240,5 @@ changeTextareaPlaceholder();
 
 window.addEventListener('resize', function(event) {
     changeTextareaPlaceholder();
-    dynamicTextareaHeight();
+    changeTextareaHeightDynamically();
 }, true);

@@ -1,4 +1,4 @@
-# Decodificador de Texto - Oracle Next Education<br/><br/>
+# Decodificador de Texto - Oracle Next Education
 Boas vindas ao primeiro desafio!<br/>
 
 

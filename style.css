@@ -213,12 +213,18 @@ textarea::placeholder {
     margin-bottom: 32px;
 }
 
-.msg-not-found h3,
-.msg-copied h3{
+.msg-not-found h3 {
     font-size: 2.4rem;
     line-height: 2.9rem;
     color: var(--gray-500-color);
 }
+
+.msg-copied h3 {
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    color: var(--dark-blue-300-color);
+}
+
 
 .msg-not-found p{
     font-size: 1.6rem;

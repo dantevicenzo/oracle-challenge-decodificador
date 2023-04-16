@@ -286,6 +286,9 @@ footer a:visited {
 
 /* Responsividade */
 @media (max-width: 1023px) {
+    body {
+        padding: 5% 5% 2% 5%;
+    }
     :root {
         font-size: 54%;
     }

@@ -377,6 +377,13 @@ footer a:visited {
     }
 }
 
+/* Solução para dispositivos que não tem hover */
+@media(hover: none) {
+    .btn:hover {
+        opacity: 0.9;
+    }
+}
+
 /* Animações customizadas */
 
 .fade-in {

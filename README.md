@@ -1,10 +1,6 @@
 # Decodificador de Texto - Oracle Next Education
 Boas vindas ao primeiro desafio!<br/>
 
-
-
-Durante estas duas semanas, vamos trabalhar em uma aplicação que criptografa textos, assim você poderá trocar mensagens secretas com outras pessoas que saibam o segredo da criptografia utilizada.<br/>
-
 As "chaves" de criptografia que utilizaremos são:<br/>
 A letra "e" é convertida para "enter"<br/>
 A letra "i" é convertida para "imes"<br/>

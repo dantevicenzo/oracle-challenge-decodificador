@@ -12,18 +12,17 @@
     </head>
     
     <body>
-        <div class="container">
-            <div class="wrap-container">
-                <div class="left-container">
+            <div class="app-container">
+            
+                <div class="wrap-input-header">
                     <header>
                         <img class="logo-alura" src="images/logo-alura.svg" alt="Logo da Alura">
-                        
                     </header>
-                    
-                    <div class="app-container">
-                        <label hidden for="msgTextarea">digite seu texto aqui</label>
-                        <textarea id="msgTextarea" name="msgTextarea" rows="32" cols="33">digite seu texto aqui</textarea>
-            
+
+                    <section class="input-message">
+                        <label hidden for="msgTextarea">Digite seu texto aqui</label>
+                        <textarea id="msgTextarea" name="msgTextarea" rows="3" cols="3" placeholder="Digite seu texto aqui"></textarea>
+                        
                         <div class="btn-container">
                             <div class="requirements">
                                 <img src="images/exclamation-circle.svg" alt="">
@@ -34,36 +33,38 @@
                                 <button id="btnDecrypt" class="btn light-gray">Descriptografar</button>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
     
-                <div class="right-container">
-                    <aside>
-                        <!-- Mensagem não encontrada -->
-                        <div class="msg-not-found">
-                            <img src="images/no-message-found.svg" alt="Nenhuma mensagem encontrada.">
-                            <h3>Nenhuma mensagem encontrada</h2>
-                            <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
-                        </div>
-                    </aside>
-                </div>
+                <section id="result" class="result">
+                    <!-- Mensagem não encontrada -->
+                    <div class="msg-not-found">
+                        <img src="images/no-message-found.svg" alt="Nenhuma mensagem encontrada.">
+                        <h3>Nenhuma mensagem encontrada</h2>
+                        <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                    </div>
+
+                    <!-- Mensagem encontrada -->
+                    <!-- <div class="msg-result">
+                        <p id="msgResult">Lorem ipsum dolor sit amet, c</p>
+                        <button id="btnCopyToClipboard" class="btn white">Copiar</button>
+                    </div> -->
+                </section>
             </div>
 
-            <div class="footer-container">
-                <footer>
-                    <ul>
-                        <li>© Desenvolvido por Dante Vicenzo</li>
-                        <li>|</li>
-                        <li>
-                            <a href="https://github.com/dantevicenzo/" target="_blank"><img src="images/github-icon.svg" alt="Logo do GitHub"> GitHub</a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/dantevicenzo/" target="_blank"><img src="images/linkedin-icon.svg" alt="Logo do LinkedIn"> LinkedIn</a>
-                        </li>
-                    </ul>
-                </footer>
-            </div>
-        </div>
+            <footer>
+                <ul>
+                    <li>© Desenvolvido por Dante Vicenzo</li>
+                    <li>|</li>
+                    <li>
+                        <a href="https://github.com/dantevicenzo/" target="_blank"><img src="images/github-icon.svg" alt="Logo do GitHub"> GitHub</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/dantevicenzo/" target="_blank"><img src="images/linkedin-icon.svg" alt="Logo do LinkedIn"> LinkedIn</a>
+                    </li>
+                </ul>
+            </footer>
+
         <script src="main.js"></script>
     </body>
 </html>

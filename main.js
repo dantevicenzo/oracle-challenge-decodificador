@@ -2,12 +2,12 @@ function getMessage(){
     return document.getElementById("msgTextarea").value;
 }
 
-function showResult(result){
-    let aside = document.getElementsByTagName("aside")[0];
+function showResult(resultMsg){
+    let resultSection = document.getElementById("result");
 
-    aside.innerHTML = `
+    resultSection.innerHTML = `
     <div class="msg-result">
-        <p id="msgResult">${result}</p>
+        <p id="msgResult">${resultMsg}</p>
         <button id="btnCopyToClipboard" class="btn white">Copiar</button>
     </div>
     `
@@ -16,9 +16,9 @@ function showResult(result){
 }
 
 function warnNoMessageFound(){
-    let aside = document.getElementsByTagName("aside")[0];
+    let resultSection = document.getElementById("result");
 
-    aside.innerHTML = `
+    resultSection.innerHTML = `
     <div class="msg-not-found">
         <img src="images/no-message-found.svg" alt="Nenhuma mensagem encontrada.">
         <h3>Nenhuma mensagem encontrada</h2>
@@ -27,15 +27,10 @@ function warnNoMessageFound(){
     `
 }
 
-function resetMsgTextarea(){
-    document.getElementById("msgTextarea").value = "digite seu texto aqui";
-}
-
 function encrypt() {
     let initialMessage = getMessage();
-
+    
     if(initialMessage == ""){
-        resetMsgTextarea();
         warnNoMessageFound();
         return;
     }
@@ -71,7 +66,7 @@ function encrypt() {
                 break;
         }
     }
-
+    
     showResult(finalMessage);
 }
 
@@ -80,13 +75,7 @@ function decrypt() {
     let encryptRegex = new RegExp("^.*(ai|enter|imes|ober|ufat).*$");
     let encryptedMessage = encryptRegex.test(finalMessage);
 
-    if(finalMessage == ""){
-        resetMsgTextarea();
-        warnNoMessageFound();
-        return;
-    }
-
-    if(!encryptedMessage){
+    if(finalMessage == "" || !encryptedMessage){
         warnNoMessageFound();
         return;
     }
@@ -206,6 +195,26 @@ function removeDiacritics (str) {
     return str;
 }
 
+function changeTextareaPlaceholder(){
+    if (window.matchMedia("(max-width:1023px)").matches) {
+        document.getElementById("msgTextarea").placeholder = "Digite seu texto";
+    }
+    else {
+        document.getElementById("msgTextarea").placeholder = "Digite seu texto aqui";
+    }
+}
+
+function changeTextareaHeightDynamically(){
+    if (window.matchMedia("(max-width:1023px)").matches) {
+        msgTextarea = document.getElementById("msgTextarea");
+        msgTextarea.style.height = "";
+        msgTextarea.style.height = msgTextarea.scrollHeight + "px";
+    }
+    else {
+        msgTextarea.style.height = "100%";
+    }
+}
+
 let btnEncrypt = document.getElementById("btnEncrypt");
 let btnDecrypt = document.getElementById("btnDecrypt");
 let msgTextarea = document.getElementById("msgTextarea");
@@ -213,3 +222,11 @@ let msgTextarea = document.getElementById("msgTextarea");
 btnEncrypt.onclick = encrypt;
 btnDecrypt.onclick = decrypt;
 msgTextarea.onkeyup = validateTextareaRegex;
+msgTextarea.oninput = changeTextareaHeightDynamically;
+
+changeTextareaPlaceholder();
+
+window.addEventListener('resize', function(event) {
+    changeTextareaPlaceholder();
+    dynamicTextareaHeight();
+}, true);

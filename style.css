@@ -37,7 +37,6 @@ button {
 
 /* Container maior da aplicação que distribui os espaços entre o header, a aplicação e o footer,  */
 body {
-    /* padding: 40px 40px 12px 40px; */
     padding: 3% 3% 1% 3%;
     display: flex;
     flex-direction: column;
@@ -238,14 +237,34 @@ footer ul {
 }
 
 footer img {
-    height: 15px;
+    height: 10px;
 }
 
 footer a {
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 3px;
+    transition: all 0.15ms;
+}
+
+footer a:hover {
+    opacity: 0.7;
+    transform: scale(1.009);
+    cursor: pointer;
+}
+
+footer a:active {
+    transform: scale(1);
+    transform: translateY(1px);
+}
+
+footer a:link {
+    color: var(--gray-400-color);
+}
+
+footer a:visited {
+    color: var(--dark-blue-300-color);
 }
 
 .requirements {
@@ -346,5 +365,9 @@ footer a {
     
     .btn-encrypt-decrypt>.btn:last-child{
         margin-left: 0px;
+    }
+
+    footer {
+        padding-bottom: 3%;
     }
 }

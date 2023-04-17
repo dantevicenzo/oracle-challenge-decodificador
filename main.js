@@ -307,6 +307,7 @@ function changeEncryptMethod(){
 
     if(currentMethod == ALURA_METHOD){
         currentMethod = CESAR_METHOD;
+        document.querySelector("link[rel~='icon']").href = 'images/favicon-red.ico';
         logo.src = "images/logo-cesar.svg";
         if(imgNoMsgFound != null){
             imgNoMsgFound.src = "images/no-message-found-red.svg";
@@ -317,6 +318,7 @@ function changeEncryptMethod(){
     }
     else {
         currentMethod = ALURA_METHOD;
+        document.querySelector("link[rel~='icon']").href = 'images/favicon-blue.ico';
         logo.src = "images/logo-alura.svg";
         if(imgNoMsgFound != null){
             imgNoMsgFound.src = "images/no-message-found-blue.svg";

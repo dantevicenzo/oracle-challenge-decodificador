@@ -139,7 +139,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    margin: 0% 0% 0% 15%;
+    margin: 0% 0% 0% 18%;
     padding-bottom: 32px;
 }
 
@@ -346,6 +346,12 @@ footer a:visited {
 }
 
 /* Responsividade */
+@media (min-width: 1920px){
+.input-message{
+    margin: 0% 0% 0% 24%;
+}
+
+}
 @media (max-width: 1023px) {
     body {
         padding: 5% 5% 2% 5%;

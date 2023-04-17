@@ -33,6 +33,7 @@ Funcionalidades adicionais que eu desenvolvi pra agregar ao projeto:<br/>
 - Animações pra melhorar a experiência de usuário
 - O texto de placeholder da textarea muda de acordo com o dispositivo usado, de acordo com o protótipo. Em desktop: "Digite seu texto aqui". Em tablets e celulares: "Digite seu texto".
 - O textarea se comporta de forma diferente de acordo com o dispositivo usado, de acordo com o protótipo. No desktop mantém seu tamanho fixo, adicionando uma barra de rolagem no conteúdo quando necessário. Em tablets e dispositivos móveis o textarea ajusta sua altura automaticamente pra caber o conteúdo adicional sem exibir barra de rolagem.
+- Clicando na logo da aplicação é possível alternar os modos de criptografia "alura" e "cesar", permitindo que o usuario escolha entre usar o método de criptografia da alura ou o método de criptografia da <a href="https://pt.m.wikipedia.org/wiki/Cifra_de_C%C3%A9sar" target="_blank">cifra de césar</a>. 
 
 Protótipo figma disponibilizado pela oracle: https://www.figma.com/file/tvFEYhVfZTjdJ5P24RGV21/Alura-Challenge---Desafio-1---L%C3%B3gica?node-id=0-1&t=rR60uE6zm5i8mpoq-0
 

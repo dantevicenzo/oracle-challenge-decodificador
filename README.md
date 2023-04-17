@@ -1,9 +1,5 @@
-# Decodificador de Texto - Oracle Next Education<br/><br/>
+# Decodificador de Texto - Oracle Next Education
 Boas vindas ao primeiro desafio!<br/>
-
-
-
-Durante estas duas semanas, vamos trabalhar em uma aplicação que criptografa textos, assim você poderá trocar mensagens secretas com outras pessoas que saibam o segredo da criptografia utilizada.<br/>
 
 As "chaves" de criptografia que utilizaremos são:<br/>
 A letra "e" é convertida para "enter"<br/>
@@ -41,3 +37,5 @@ Funcionalidades adicionais que eu desenvolvi pra agregar ao projeto:<br/>
 Protótipo figma disponibilizado pela oracle: https://www.figma.com/file/tvFEYhVfZTjdJ5P24RGV21/Alura-Challenge---Desafio-1---L%C3%B3gica?node-id=0-1&t=rR60uE6zm5i8mpoq-0
 
 ![Imagem de Exemplo](https://user-images.githubusercontent.com/91544872/157673876-2c51fc09-5bed-48c0-aad3-97fc7fa64d1d.png)
+
+Badge de desafio concluído: ![Badge](https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F10224%2F1671211139Prancheta_3.png?utm_campaign=alura_latam_-_challenge_email_projeto_1_br&utm_medium=email&utm_source=RD+Station)

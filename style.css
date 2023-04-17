@@ -90,6 +90,7 @@ body {
 .btn-container {
     width: 100%;
     max-width: 680px;
+    margin-top: 32px;
 }
 
 .btn-encrypt-decrypt {

@@ -272,15 +272,6 @@ function removeDiacritics (str) {
     return str;
 }
 
-function changeTextareaPlaceholder(){
-    if (window.matchMedia("(max-width:1023px)").matches) {
-        document.getElementById("msgTextarea").placeholder = "Digite seu texto";
-    }
-    else {
-        document.getElementById("msgTextarea").placeholder = "Digite seu texto aqui";
-    }
-}
-
 function changeTextareaHeightDynamically(){
     if (window.matchMedia("(max-width:1023px)").matches) {
         msgTextarea = document.getElementById("msgTextarea");
@@ -349,9 +340,6 @@ msgTextarea.onkeyup = validateTextareaRegex;
 msgTextarea.oninput = changeTextareaHeightDynamically;
 imgLogo.onclick = changeEncryptMethod;
 
-changeTextareaPlaceholder();
-
 window.addEventListener('resize', function(event) {
-    changeTextareaPlaceholder();
     changeTextareaHeightDynamically();
 }, true);

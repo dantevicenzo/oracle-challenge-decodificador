@@ -1,12 +1,26 @@
 :root {
     /* Paleta de cores do projeto */
+
+    /* VARIÁVEIS */
+    --current-method-primary-color: #0A3871;
+    --current-method-secondary-color: #D8DFE8;
+    --current-method-background-color: #F3F5FC;
+
+    /* ALURA */
     --light-blue-100-color: #F3F5FC;
     --dark-blue-300-color: #0A3871;
+    --light-gray-color: #D8DFE8;
+
+    /* CESAR */
+    --light-red-100-color: #fcf3f3;
+    --dark-red-300-color: #710a0a;
+    --light-red-color: #e8d8d8;
+
+    /* GLOBAL */
     --white-color: #FFFFFF;
     --gray-500-color: #343A40;
     --gray-400-color: #495057;
     --gray-300-color: #868E96;
-    --light-gray-color: #D8DFE8;
 
     /* Controle de responsividade das fontes */
     font-size: 62.5%;
@@ -26,7 +40,7 @@ body {
     height: 100vh;
     font-family: 'Inter', sans-serif;
     text-rendering: optimizeLegibility;
-    background-color: var(--light-blue-100-color);
+    background-color: var(--current-method-background-color);
 }
 
 input,
@@ -56,21 +70,21 @@ body {
 }
 
 .btn.dark-blue {
-    background: var(--dark-blue-300-color);
+    background: var(--current-method-primary-color);
     border: none;
     color: var(--white-color);
 }
 
 .btn.light-gray {
-    background: var(--light-gray-color);
-    border: 1px solid var(--dark-blue-300-color);
-    color: var(--dark-blue-300-color);
+    background: var(--current-method-secondary-color);
+    border: 1px solid var(--current-method-primary-color);
+    color: var(--current-method-primary-color);
 }
 
 .btn.white {
     background: var(--white-color);
-    border: 1px solid var(--dark-blue-300-color);
-    color: var(--dark-blue-300-color);
+    border: 1px solid var(--current-method-primary-color);
+    color: var(--current-method-primary-color);
 }
 
 .btn-container {
@@ -134,6 +148,29 @@ header {
     margin: 0% 0% 0% 3%;
 }
 
+*.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+ 
+    /*
+      Introduced in IE 10.
+      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.logo {
+    max-height: 48px;
+}
+
+@media (hover: hover) {
+    .logo:hover {
+        cursor: pointer;
+        animation: spinner 1.5s infinite linear;
+    }
+}
 
 /* Textarea */
 textarea {
@@ -151,7 +188,7 @@ textarea {
 
     font-size: 3.2rem;
     line-height: 4.3rem;
-    color: var(--dark-blue-300-color);
+    color: var(--current-method-primary-color);
 }
 
 textarea::placeholder {
@@ -233,7 +270,7 @@ textarea::placeholder {
 .msg-copied h3 {
     font-size: 2.4rem;
     line-height: 2.9rem;
-    color: var(--dark-blue-300-color);
+    color: var(--current-method-primary-color);
 }
 
 
@@ -288,7 +325,7 @@ footer a:link {
 }
 
 footer a:visited {
-    color: var(--dark-blue-300-color);
+    color: var(--current-method-primary-color);
 }
 
 .requirements {
@@ -400,68 +437,52 @@ footer a:visited {
 }
 
 /* Animações customizadas */
-.fade-in {
+@keyframes fadeIn {
+    0% { 
+        -webkit-opacity: 0;
+        -moz-opacity: 0;
+        -ms-opacity: 0;
+        -o-opacity: 0;
+        opacity: 0;
+    }
+    100% { 
+        -webkit-opacity: 1;
+        -moz-opacity: 1;
+        -ms-opacity: 1;
+        -o-opacity: 1;
+        opacity: 1;
+    }
+}
+
+.fade-in,
+body {
     animation: fadeIn 0.5s;
     -webkit-animation: fadeIn 0.5s;
     -moz-animation: fadeIn 0.5s;
     -o-animation: fadeIn 0.5s;
     -ms-animation: fadeIn 0.5s;
 }
-  
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-  
-@-moz-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-  
-@-webkit-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-  
-@-o-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-  
-@-ms-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
 
-.fade-out {
-    animation: fadeOut 1s;
-    -webkit-animation: fadeOut 1s;
-    -moz-animation: fadeOut 1s;
-    -o-animation: fadeOut 1s;
-    -ms-animation: fadeOut 1s;
-}
-  
-@keyframes fadeOut {
-    100% { opacity: 1; }
-    0% { opacity: 0; }
-}
-  
-@-moz-keyframes fadeOut {
-    100% { opacity: 1; }
-    0% { opacity: 0; }
-}
-  
-@-webkit-keyframes fadeOut {
-    100% { opacity: 1; }
-    0% { opacity: 0; }
-}
-  
-@-o-keyframes fadeOut {
-    100% { opacity: 1; }
-    0% { opacity: 0; }
-}
-  
-@-ms-keyframes fadeOut {
-    100% { opacity: 1; }
-    0% { opacity: 0; }
+@keyframes spinner {
+    0% { 
+        -webkit-transform: rotate3d(0, 1, 0, 0deg);
+        -moz-transform: rotate3d(0, 1, 0, 0deg);
+        -ms-transform: rotate3d(0, 1, 0, 0deg);
+        -o-transform: rotate3d(0, 1, 0, 0deg);
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+    50% { 
+        -webkit-transform: rotate3d(0, 1, 0, 180deg);
+        -moz-transform: rotate3d(0, 1, 0, 0deg);
+        -ms-transform: rotate3d(0, 1, 0, 180deg);
+        -o-transform: rotate3d(0, 1, 0, 180deg);
+        transform: rotate3d(0, 1, 0, 180deg);
+    }
+    100% { 
+        -webkit-transform: rotate3d(0, 1, 0, 360deg);
+        -moz-transform: rotate3d(0, 1, 0, 0deg);
+        -ms-transform: rotate3d(0, 1, 0, 360deg);
+        -o-transform: rotate3d(0, 1, 0, 360deg);
+        transform: rotate3d(0, 1, 0, 360deg);
+    }
 }

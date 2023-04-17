@@ -6,46 +6,39 @@ function showResult(resultMsg){
     let resultSection = document.getElementById("result");
 
     resultSection.innerHTML = `
-    <div class="msg-result">
-        <p id="msgResult" class="fade-in">${resultMsg}</p>
+    <div class="msg-result fade-in">
+        <p id="msgResult">${resultMsg}</p>
         <button id="btnCopyToClipboard" class="btn white">Copiar</button>
     </div>
-    `
+    `;
     let btnCopyToClipboard = document.getElementById("btnCopyToClipboard");
     btnCopyToClipboard.onclick = copyToClipboard;
 }
 
 function warnNoMessageFound(){
     let resultSection = document.getElementById("result");
+    let imageColor = currentMethod == ALURA_METHOD ? "blue" : "red";
 
     resultSection.innerHTML = `
     <div class="msg-not-found fade-in">
-        <img src="images/no-message-found.svg" alt="Nenhuma mensagem encontrada.">
+        <img id="imgNoMsgFound" src="images/no-message-found-${imageColor}.svg" alt="Nenhuma mensagem encontrada.">
         <h3>Nenhuma mensagem encontrada</h2>
         <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
     </div>
-    `
+    `;
 }
 
-function encrypt() {
-    let initialMessage = getMessage();
-
-    if(initialMessage == ""){
-        warnNoMessageFound();
-        return;
-    }
-
+function encryptAlura(initialMessage){
     let finalMessage = "";
-
     for (let char of initialMessage){
         switch (char) {
             case 'a':
                 finalMessage += "ai";
                 break;
 
-            case 'e':
-                finalMessage += "enter";
-                break;
+              case 'e':
+                  finalMessage += "enter";
+                  break;
 
             case 'i':
                 finalMessage += "imes";
@@ -64,25 +57,100 @@ function encrypt() {
                 break;
         }
     }
+    return finalMessage;
+}
 
+function decryptAlura(encryptedMessage){
+    encryptedMessage = encryptedMessage.replaceAll("ai", "a");
+    encryptedMessage = encryptedMessage.replaceAll("enter", "e");
+    encryptedMessage = encryptedMessage.replaceAll("imes", "i");
+    encryptedMessage = encryptedMessage.replaceAll("ober", "o");
+    encryptedMessage = encryptedMessage.replaceAll("ufat", "u");
+    return encryptedMessage;
+}
+
+function encryptDecryptCesar(initialMessage, displacement, encryptDecrypt){
+    
+    let finalMessage = ""
+    let whiteSpaceRegex = new RegExp("\\s");
+
+    for (let char of initialMessage){
+        if(char.match(whiteSpaceRegex)){
+            finalMessage += char;
+            continue;
+        }
+
+        let firstLetterASC = "a".charCodeAt(0);
+        let charASC = char.charCodeAt(0);
+        let charNum = charASC - firstLetterASC;
+        let encryptCharNum;
+
+        if(encryptDecrypt == "encrypt"){
+            encryptCharNum = (charNum + displacement) % 26;
+        }
+        else {
+            encryptCharNum = (charNum - displacement) % 26;
+            if(encryptCharNum < 0){
+                encryptCharNum += 26;
+            }
+        }
+
+        let encryptASC = encryptCharNum + firstLetterASC;
+        let encryptChar = String.fromCharCode(encryptASC);
+
+        finalMessage += encryptChar;
+    }
+
+    return finalMessage;
+}
+
+function encrypt() {
+    clearTimeout(showResultTimeout);
+
+    let initialMessage = getMessage();
+
+    if(initialMessage == ""){
+        warnNoMessageFound();
+        return;
+    }
+    
+    let finalMessage = "";
+
+    if(currentMethod == ALURA_METHOD){
+        finalMessage = encryptAlura(initialMessage);
+    }
+    else if(currentMethod == CESAR_METHOD){
+        finalMessage = encryptDecryptCesar(initialMessage, CESAR_DISPLACEMENT, "encrypt");
+    }
+    
     showResult(finalMessage);
 }
 
 function decrypt() {
-    let finalMessage = getMessage();
-    let encryptRegex = new RegExp("^.*(ai|enter|imes|ober|ufat).*$");
-    let encryptedMessage = encryptRegex.test(finalMessage);
+    clearTimeout(showResultTimeout);
+    let encryptedMessage = getMessage();
+    let finalMessage = encryptedMessage;
+    
+    let encryptRegexAlura = new RegExp("^.*(ai|enter|imes|ober|ufat).*$");
+    let encryptedMessageAlura = encryptRegexAlura.test(finalMessage);
 
-    if(finalMessage == "" || !encryptedMessage){
+    if(finalMessage == ""){
         warnNoMessageFound();
         return;
     }
 
-    finalMessage = finalMessage.replaceAll("ai", "a");
-    finalMessage = finalMessage.replaceAll("enter", "e");
-    finalMessage = finalMessage.replaceAll("imes", "i");
-    finalMessage = finalMessage.replaceAll("ober", "o");
-    finalMessage = finalMessage.replaceAll("ufat", "u");
+    if(currentMethod == ALURA_METHOD){
+        if(!encryptedMessageAlura){
+            warnNoMessageFound();
+            return;
+        }
+
+        finalMessage = decryptAlura(finalMessage);
+    }
+    
+    else if(currentMethod == CESAR_METHOD){
+        finalMessage = encryptDecryptCesar(finalMessage, CESAR_DISPLACEMENT, "decrypt");
+    }
 
     showResult(finalMessage);
 }
@@ -99,7 +167,7 @@ function copyToClipboard() {
         <h3>Mensagem copiada</h2>
     </div>
     `
-    setTimeout( function() {
+    showResultTimeout = setTimeout( function() {
         showResult(msgResult);
     }, 1500);
 }
@@ -224,14 +292,60 @@ function changeTextareaHeightDynamically(){
     }
 }
 
+function changeEncryptMethod(){
+    let logo = document.getElementById("logo");
+    let imgNoMsgFound = document.getElementById("imgNoMsgFound");
+    let root = document.documentElement;
+
+    let cesarPrimaryColor = getComputedStyle(document.documentElement).getPropertyValue('--dark-red-300-color');
+    let cesarSecondaryColor = getComputedStyle(document.documentElement).getPropertyValue('--light-red-color');
+    let cesarBackgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--light-red-100-color');
+
+    let aluraPrimaryColor = getComputedStyle(document.documentElement).getPropertyValue('--dark-blue-300-color');
+    let aluraSecondaryColor = getComputedStyle(document.documentElement).getPropertyValue('--light-gray-color');
+    let aluraBackgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--light-blue-100-color');
+
+    if(currentMethod == ALURA_METHOD){
+        currentMethod = CESAR_METHOD;
+        logo.src = "images/logo-cesar.svg";
+        if(imgNoMsgFound != null){
+            imgNoMsgFound.src = "images/no-message-found-red.svg";
+        }
+        root.style.setProperty('--current-method-primary-color', cesarPrimaryColor);
+        root.style.setProperty('--current-method-secondary-color', cesarSecondaryColor);
+        root.style.setProperty('--current-method-background-color', cesarBackgroundColor);
+    }
+    else {
+        currentMethod = ALURA_METHOD;
+        logo.src = "images/logo-alura.svg";
+        if(imgNoMsgFound != null){
+            imgNoMsgFound.src = "images/no-message-found-blue.svg";
+        }
+        root.style.setProperty('--current-method-primary-color', aluraPrimaryColor);
+        root.style.setProperty('--current-method-secondary-color', aluraSecondaryColor);
+        root.style.setProperty('--current-method-background-color', aluraBackgroundColor);
+    }
+}
+
+const CESAR_DISPLACEMENT = 666;
+const ALURA_METHOD = "alura";
+const CESAR_METHOD = "cesar";
+
+let currentMethod = ALURA_METHOD;
+
+let showResultTimeout;
+
 let btnEncrypt = document.getElementById("btnEncrypt");
 let btnDecrypt = document.getElementById("btnDecrypt");
 let msgTextarea = document.getElementById("msgTextarea");
+let imgLogo = document.getElementById("logo");
 
 btnEncrypt.onclick = encrypt;
 btnDecrypt.onclick = decrypt;
+
 msgTextarea.onkeyup = validateTextareaRegex;
 msgTextarea.oninput = changeTextareaHeightDynamically;
+imgLogo.onclick = changeEncryptMethod;
 
 changeTextareaPlaceholder();
 

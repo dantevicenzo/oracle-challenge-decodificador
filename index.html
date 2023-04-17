@@ -13,10 +13,9 @@
     
     <body>
         <div class="app-container">
-        
             <div class="wrap-input-header">
                 <header>
-                    <img class="logo-alura" src="images/logo-alura.svg" alt="Logo da Alura">
+                    <img id="logo" class="logo unselectable" unselectable="on" src="images/logo-alura.svg" alt="Logo da Alura">                
                 </header>
 
                 <section class="input-message">
@@ -29,8 +28,8 @@
                             <span>Apenas letras minúsculas e sem acento.</span>
                         </div>
                         <div class="btn-encrypt-decrypt">
-                            <button id="btnEncrypt" class="btn dark-blue">Criptografar</button>
-                            <button id="btnDecrypt" class="btn light-gray">Descriptografar</button>
+                            <button id="btnEncrypt" class="btn dark-blue unselectable">Criptografar</button>
+                            <button id="btnDecrypt" class="btn light-gray unselectable">Descriptografar</button>
                         </div>
                     </div>
                 </section>
@@ -38,7 +37,7 @@
 
             <section id="result" class="result">
                 <div class="msg-not-found fade-in">
-                    <img src="images/no-message-found.svg" alt="Nenhuma mensagem encontrada.">
+                    <img id="imgNoMsgFound" src="images/no-message-found-blue.svg" alt="Nenhuma mensagem encontrada.">
                     <h3>Nenhuma mensagem encontrada</h2>
                     <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
                 </div>

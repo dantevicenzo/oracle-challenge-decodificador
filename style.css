@@ -235,7 +235,7 @@ textarea::placeholder {
 }
 
 /* Remove o overflow de texto vertical na mensagem de resultado em desktops */
-@media (max-height: 1080px){
+@media (min-width: 1024px) and (max-height: 1080px){
     .msg-result p {
         display: -webkit-box;
         -webkit-line-clamp: 20; /** número de linhas que você quer exibir */
@@ -244,7 +244,7 @@ textarea::placeholder {
         text-overflow: ellipsis;
     }
 }
-@media (max-height: 768px){
+@media (min-width: 1024px) and (max-height: 768px){
     .msg-result p {
         display: -webkit-box;
         -webkit-line-clamp: 14; /** número de linhas que você quer exibir */

@@ -235,10 +235,19 @@ textarea::placeholder {
 }
 
 /* Remove o overflow de texto vertical na mensagem de resultado em desktops */
-@media (min-width: 1024px){
+@media (max-height: 1080px){
     .msg-result p {
         display: -webkit-box;
-        -webkit-line-clamp: 13; /** número de linhas que você quer exibir */
+        -webkit-line-clamp: 20; /** número de linhas que você quer exibir */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+@media (max-height: 768px){
+    .msg-result p {
+        display: -webkit-box;
+        -webkit-line-clamp: 14; /** número de linhas que você quer exibir */
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;

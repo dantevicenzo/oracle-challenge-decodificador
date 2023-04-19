@@ -40,6 +40,22 @@ Apresentação em Vídeo: https://youtu.be/7rgGWMix8DE
 
 Protótipo Figma: https://www.figma.com/file/tvFEYhVfZTjdJ5P24RGV21/Alura-Challenge---Desafio-1---L%C3%B3gica?node-id=0-1&t=rR60uE6zm5i8mpoq-0
 
-![Imagem de Exemplo](https://user-images.githubusercontent.com/91544872/157673876-2c51fc09-5bed-48c0-aad3-97fc7fa64d1d.png)
+## Screenshots
+
+### Desktop - Modo Alura
+
+<p align="middle">
+  <img src="[/img1.png](https://user-images.githubusercontent.com/107062938/233083486-ade519e1-4105-489b-8ab8-424b02edf29c.png)" width="100" />
+  <img src="[/img2.png](https://user-images.githubusercontent.com/107062938/233083488-22ac2071-b69d-42d2-8ecf-f97f6a0d696b.png)" width="100" /> 
+  <img src="[/img3.png](https://user-images.githubusercontent.com/107062938/233083475-0b9d9eda-6098-4166-99f5-42a06a8d6c91.png)" width="100" />
+</p>
+
+| ![dantevicenzo github io_oracle-challenge-decodificador_ (1)](https://user-images.githubusercontent.com/107062938/233083486-ade519e1-4105-489b-8ab8-424b02edf29c.png) | ![dantevicenzo github io_oracle-challenge-decodificador_ (2)](https://user-images.githubusercontent.com/107062938/233083488-22ac2071-b69d-42d2-8ecf-f97f6a0d696b.png) | ![dantevicenzo github io_oracle-challenge-decodificador_ (4)](https://user-images.githubusercontent.com/107062938/233083475-0b9d9eda-6098-4166-99f5-42a06a8d6c91.png) |
+### Desktop - Modo Cesar
+
+
+### Tablet
+
+### Smartphone
 
 Badge de desafio concluído: ![Badge](https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F10224%2F1671211139Prancheta_3.png?utm_campaign=alura_latam_-_challenge_email_projeto_1_br&utm_medium=email&utm_source=RD+Station)

@@ -36,9 +36,13 @@ Funcionalidades adicionais que eu desenvolvi pra agregar ao projeto:<br/>
 
 Deploy: https://dantevicenzo.github.io/oracle-challenge-decodificador/
 
+![gif-decodificador](https://user-images.githubusercontent.com/107062938/233110587-04dace37-afda-4d25-a089-8bad567435d3.gif)
+
 Apresentação em Vídeo: https://youtu.be/7rgGWMix8DE
 
 Protótipo Figma: https://www.figma.com/file/tvFEYhVfZTjdJ5P24RGV21/Alura-Challenge---Desafio-1---L%C3%B3gica?node-id=0-1&t=rR60uE6zm5i8mpoq-0
+
+
 
 ## Screenshots
 

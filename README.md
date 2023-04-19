@@ -45,13 +45,18 @@ Protótipo Figma: https://www.figma.com/file/tvFEYhVfZTjdJ5P24RGV21/Alura-Challe
 ### Desktop - Modo Alura
 
 <p align="middle">
-  <img src="[/img1.png](https://user-images.githubusercontent.com/107062938/233083486-ade519e1-4105-489b-8ab8-424b02edf29c.png)" width="100" />
-  <img src="[/img2.png](https://user-images.githubusercontent.com/107062938/233083488-22ac2071-b69d-42d2-8ecf-f97f6a0d696b.png)" width="100" /> 
-  <img src="[/img3.png](https://user-images.githubusercontent.com/107062938/233083475-0b9d9eda-6098-4166-99f5-42a06a8d6c91.png)" width="100" />
+  <img src="https://user-images.githubusercontent.com/107062938/233083486-ade519e1-4105-489b-8ab8-424b02edf29c.png" width="33%" />
+  <img src="https://user-images.githubusercontent.com/107062938/233083488-22ac2071-b69d-42d2-8ecf-f97f6a0d696b.png" width="33%" /> 
+  <img src="https://user-images.githubusercontent.com/107062938/233083475-0b9d9eda-6098-4166-99f5-42a06a8d6c91.png" width="33%" />
 </p>
 
-| ![dantevicenzo github io_oracle-challenge-decodificador_ (1)](https://user-images.githubusercontent.com/107062938/233083486-ade519e1-4105-489b-8ab8-424b02edf29c.png) | ![dantevicenzo github io_oracle-challenge-decodificador_ (2)](https://user-images.githubusercontent.com/107062938/233083488-22ac2071-b69d-42d2-8ecf-f97f6a0d696b.png) | ![dantevicenzo github io_oracle-challenge-decodificador_ (4)](https://user-images.githubusercontent.com/107062938/233083475-0b9d9eda-6098-4166-99f5-42a06a8d6c91.png) |
 ### Desktop - Modo Cesar
+
+<p align="middle">
+  <img src="https://user-images.githubusercontent.com/107062938/233086378-3787624d-bdc3-4d5d-8d50-88cddd2d7af0.png" width="33%" />
+  <img src="https://user-images.githubusercontent.com/107062938/233086381-52855e00-754c-4e4e-a887-f13dcb11b7e1.png" width="33%" /> 
+  <img src="https://user-images.githubusercontent.com/107062938/233086369-25535d42-b075-42ce-bf23-cf677878fe0b.png" width="33%" />
+</p>
 
 
 ### Tablet

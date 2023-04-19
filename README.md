@@ -25,7 +25,7 @@ Extras:<br/>
 
 Funcionalidades adicionais que eu desenvolvi pra agregar ao projeto:<br/>
 - Validação automática do texto digitado no textarea para permitir apenas letras minúsculas e espaçamentos. Acentuações, caracteres especiais e números, não serão aceitas mesmo que o usuário tente inserir esses caracteres, garantindo a funcionalidade da aplicação, evitando bugs e mensagens de erro pro usuário final. Pra melhorar a experiência, caracteres com acentuação e em letra maiúsculas são substituídos por caracteres válidos ao invés de serem removidos. Ex: ã -> a, A -> a, Á -> a. Se não houver substituição válida o caractere é removido da textarea.
-- Ao descriptografar, verificar se existe uma mensagem criptografada no texto, caso não tenha mensagem criptografada, exibir mensagem informando que nenhuma mensagem foi encontrada, caso tenha mensagem criptografada, seguir o fluxo normal da descriptografia.
+- Ao descriptografar, verificar se existe uma mensagem criptografada no texto, caso não tenha mensagem criptografada, exibir mensagem informando que nenhuma mensagem foi encontrada, caso tenha mensagem criptografada, seguir o fluxo normal da descriptografia. (Apenas no modo alura)
 - Animações nos botões para melhorar a experiência do usuário.
 - Mensagem de feedback informando que o texto foi copiado para área de transferência, dentro da aplicação ou em uma modal.
 - Design responsivo em qualquer dimensão

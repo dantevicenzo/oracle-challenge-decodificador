@@ -99,5 +99,3 @@ Apresentação em Vídeo: https://youtu.be/7rgGWMix8DE
   <img src="https://user-images.githubusercontent.com/107062938/233087892-27a4bc4e-35fb-46c0-a4b4-1ca4f5d00bba.png" align="top" width="30%" /> 
   <img src="https://user-images.githubusercontent.com/107062938/233087895-06c1bcba-ee86-459c-81d6-2b3d553e3bfd.png" align="top" width="30%" />
 </p>
-
-Badge de desafio concluído: ![Badge](https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F10224%2F1671211139Prancheta_3.png?utm_campaign=alura_latam_-_challenge_email_projeto_1_br&utm_medium=email&utm_source=RD+Station)
